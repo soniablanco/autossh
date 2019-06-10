@@ -2,11 +2,25 @@
 set -e
 
 
-mkdir /root/.ssh
-chmod 600 /root/.ssh
-cp /secrets/config /root/.ssh/config
-chmod 600 /root/.ssh/config
-cp /secrets/id_rsa /root/.ssh/id_rsa
-chmod 600 /root/.ssh/id_rsa
+#check if needed folders exist.
+
+
+
+if [[ ! -d /root/.ssh ]]; then
+	mkdir /root/.ssh
+	chmod 600 /root/.ssh
+	cat > /root/.ssh/config <<-ConfigHD
+	Host    *
+	        UserKnownHostsFile        /dev/null
+	        StrictHostKeyChecking     no
+	        TCPKeepAlive              no
+	        ServerAliveInterval       5
+	        ServerAliveCountMax       3
+	ConfigHD
+	chmod 600 /root/.ssh/config
+fi
+mv /secrets/id_rsa /root/.ssh
+chmod 600 /root/.ssh/ir_rsa
+
 
 exec  autossh $@ -N
