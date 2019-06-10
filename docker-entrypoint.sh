@@ -15,8 +15,8 @@ Host    *
 		ServerAliveCountMax       3
 ConfigHD
 chmod 600 /root/.ssh/config
-mv /secrets/id_rsa /root/.ssh
-chmod 600 /root/.ssh/ir_rsa
+cp /secrets/id_rsa /root/.ssh/id_rsa
+chmod 600 /root/.ssh/id_rsa
 
 
 exec  autossh $@ -N
