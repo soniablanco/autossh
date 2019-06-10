@@ -1,0 +1,6 @@
+Host    *
+	        UserKnownHostsFile        /dev/null
+	        StrictHostKeyChecking     no
+	        TCPKeepAlive              no
+	        ServerAliveInterval       5
+	        ServerAliveCountMax       3
