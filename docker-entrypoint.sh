@@ -2,7 +2,9 @@
 set -e
 
 
-
+#
+rm -rf /root/.ssh
+mkdir /root/.ssh
 chmod 600 /root/.ssh
 cat > /root/.ssh/config <<-ConfigHD
 Host    *
