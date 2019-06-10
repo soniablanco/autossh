@@ -13,6 +13,7 @@ Host    *
 		TCPKeepAlive              no
 		ServerAliveInterval       5
 		ServerAliveCountMax       3
+GatewayPorts=yes
 ConfigHD
 chmod 600 /root/.ssh/config
 cp /secrets/id_rsa /root/.ssh/id_rsa
