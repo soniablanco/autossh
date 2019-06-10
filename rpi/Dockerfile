@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-debian
+FROM balenalib/raspberrypi3-debian
 RUN [ "cross-build-start" ]
 
 
