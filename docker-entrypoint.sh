@@ -2,8 +2,7 @@
 set -e
 
 
-#
-mkdir /root/.ssh
+
 chmod 600 /root/.ssh
 cat > /root/.ssh/config <<-ConfigHD
 Host    *
