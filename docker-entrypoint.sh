@@ -13,6 +13,7 @@ Host    *
 		TCPKeepAlive              no
 		ServerAliveInterval       5
 		ServerAliveCountMax       3
+		ExitOnForwardFailure      yes
 GatewayPorts=yes
 ConfigHD
 chmod 600 /root/.ssh/config
