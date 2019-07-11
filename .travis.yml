@@ -5,7 +5,7 @@ services:
   - docker
 
 
-script: bash rpi/travis.sh || travis_terminate 1;
+script: bash travis.sh || travis_terminate 1;
 
 notifications:
    email:
